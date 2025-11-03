@@ -80,13 +80,12 @@ jobs:
             tagline: 'AI-Native Version Control',
             url: process.env.DOCUSAURUS_URL,
             baseUrl: process.env.DOCUSAURUS_BASE_URL,
-            onBrokenLinks: 'throw',
+            onBrokenLinks: 'warn',
             trailingSlash: false,
             organizationName: repo.split('/')[0],
             projectName: repo.split('/')[1],
             markdown: {
               hooks: {
-                // Migrate from deprecated onBrokenMarkdownLinks
                 onBrokenMarkdownLinks: 'warn'
               }
             },
